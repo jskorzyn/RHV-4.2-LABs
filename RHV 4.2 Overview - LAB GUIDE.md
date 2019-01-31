@@ -1,4 +1,4 @@
-RHV 4.2 LAB GUIDE
+RHV 4.2 Overview - LAB GUIDE
 ====================
 Deployment
 ----------
