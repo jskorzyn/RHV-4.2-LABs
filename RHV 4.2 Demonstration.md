@@ -1,0 +1,172 @@
+RHV 4.2 Demonstration
+====================
+Deployment
+----------
+
+You'll receive by e-mail the $GUID for your environment and the URLs to access the systems.
+
+Preparation
+-----------
+
+1.  Create bookmarks in your browser for:
+    1.  RHV Administration Portal:  [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com)
+    2.  Wordpress: [https://wordpress-$GUID.rhpds.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.example.com)
+    3.  Windows Server (IIS): [https://windows-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com)
+    4.  Noisy Neighbor (IIS): [https://noisy-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com)
+    5.  Scale UP: [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com)
+
+2.  Access RHVM and start the following VMs:
+    1.  Dhcp
+    2.  Wordpress
+    3.  Database
+    4.  WindowsApp
+    5.  NoisyNeighbor
+    6.  ScaleUP
+
+Credentials
+-----------
+
+*   RHV Admin Portal → admin / r3dh4t1!
+*   RHV hosts → root / r3dh4t1!
+*   All VMs → admin / r3dh4t1! (with sudo access)
+*   Wordpress → shadowman / r3dh4t!RHV418
+
+
+--------------------
+
+
+Demonstration script
+--------------------
+
+### GUI Overview
+
+Login to RHV Administration Portal and show the dashboard.
+
+Mention the global utilization charts. Click on Memory widget and show memory utilization for hosts and VMs.
+
+Again on main dashboard, mention that at a glance it’s possible to know how much resources (data centers, clusters, hosts, storage domains and VMs) are being managed and if there are any failed resources or important events.
+
+Mention this UI is common to most Red Hat Products.
+
+### Compute -> Virtual Machines overview
+
+*   Listing of all VMs including basic information like IP addresses, FQDN, resource usage and host where it’s running.
+*   Click on “RHEL VMs” bookmark to show the usage of the feature. Show the query in the box.  
+    *   Write “and” at the end of the query
+    *   show available options and tell several complex queries can be created and saved as a bookmark
+    *   Include “status=up” and press enter.
+    *   Click on “star”, but don’t save.
+*   Clear search box (x button)
+*   Select “wordpress” VM and click on Console  
+    (I recommend not showing the console of a Windows VM because RHV lack the optimized drivers and performance may not be good)
+*   Close the window
+
+### New VM
+
+One of the common operations is to create a VM, so let’s demo it
+
+*   Click in “**New**” to create a VM
+*   Select “rhel-7.5-demo” template  
+    (admin user is already created, as opposed to the rhel-7.5-template where cloud-init must be used)
+*   Name: demo01
+*   Description: creating vm demo
+*   Mention the VM is attached to a network and other interfaces could be configured using the “+” sign. Also, Network interfaces may be added later.
+*   Click on “Show Advanced Options” if needed
+*   Click on **System**
+*   Show the admin can set RAM and CPUs.  
+    Maximum memory means the max amount of RAM that can be hot-added to the VM  
+    Advanced Parameters allow configuring number of sockets, cores and threads.
+*   Click on **Initial Run**
+*   Show that VMs can be customized on boot using cloud-init for Linux or Sysprep for Windows.
+*   Click on **OK** to create VM
+*   While VM is being created, click on the name of the VM and show the available information in **General** tab
+*   Go to **Network Interfaces**. Tell this tab shows information about VM interfaces, including network they’re attached to and IP addresses. Mention new interfaces can be added anytime.
+*   Go to **Disks** tab. Similarly tell this tab shows information about disks used by the VM.
+    *   Click on **New**, select “**Direct LUN**” and say RHV allows VMs to use LUNs as disks.
+    *   Click on **Cancel**
+*   Go to **Snapshots** tab. Click on **Create** and write “snap1” on description. Click on **OK**.
+    *   Snapshots can be taken with VM running and it’s possible to “preview” a snapshot before reverting to it. It’s also possible to create a template from a snapshot and create a VM based on the template.
+*   Click on **Run** to start the “demo01” VM.
+*   Go back to the Virtual Machines listing
+*   Access “demo01” console and login with “admin / r3dh4t1!”
+*   Close console
+
+### Live Migration
+
+Preparation:
+
+*   Open an additional web browser window and resize both RHV manager window and this new one so that both can be shown while the VM is migrated.
+*   Open a terminal window and ssh to workstation-$GUID.rhpds.opentlc.com. Prepare to ping the wordpress VM at 10.10.90.52.
+*   The goal is to be able to show the video available in the wordpress app as well as the wordpress vm migrating and the ping running.  
+    
+
+Execute the demo.
+
+*   Organize / resize windows as explained.
+*   On the Virtual Machines listing, select the “Wordpress app” bookmark.
+*   Open the second browser at [https://wordpress-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.opentlc.com)
+*   Go down until the video is shown
+*   Tell you’re going to show a VM live migrating from a host to another one in the cluster
+*   type on terminal: _sudo ping -i 0.1 10.10.90.50_.
+*   Select “wordpress” vm and click on migrate - DON’T Click on OK
+*   Play the video and immediately start the migration.  
+    Should take approx. 30 seconds
+*   VM migrated from one host to another without interruption.
+*   Cancel _ping_ and show no packets were lost (although it never happened in my tests, some packets could be lost, but definitely not many).
+
+### Storage Live Migration
+
+Preparation
+
+Login to Wordpress: [https://wordpress-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.opentlc.com) (shadowman / r3dh4t!RHV418)
+
+*   Keep the same window layout from previous demo.
+*   Click on “database” VM and go to “**Disks**” tab
+*   Mention that sometimes it’s required to move the VM disk from an storage to another, but some applications can’t have downtime.
+*   Select the disk, click on the 3 dots at the right of the “Remove” button and select “Move”
+*   Show that there’s a Source and a Target Storage domain. Click on **OK**.
+*   While the disk is migration, write a blog post (example below)  
+
+    _Title: RHV Supports Storage Live Migration  
+    Disks is moving from one Storage Domain to another._
+
+*   Process takes approx 3 min.
+*   Show the tasks list or double-click on the disk name to show the process ended and disk was moved.
+*   Reload wordpress web page to confirm data is there.
+
+### Network QoS
+
+RHV provides QoS features to limit resource usage by VMs, avoiding one VM to consume all resources of a virtualization host - also known as the the noisy neighbor. The administrators can set limits for CPU, Storage throughput and IOPs and network bandwidth.
+
+We have 2 Windows 2012R2 server VMs with a web application that can be used to measure network connection bandwidth.
+
+*   Open one browser window at [https://windows.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows.example.com)[https://windows-$GUID.rhpds.opentlc.com  
+    ](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com)Mention that RHV is certified to run several Windows client and server releases, including versions as Windows 10 and Windows Server 2016.  
+    (This demo is using Windows Server 2012 as the nested virtualization hosts have Skylake CPUs and it wasn’t possible to run Windows Server 2016 with it - mention if needed)
+*   On this same browser, change URL to [https://windows-$GUID.rhpds.opentlc.com/speedtest.](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com%2Fspeedtest)
+*   Open another browser window and resize the 2 windows so that both are visible at the same time.
+*   On the second browser, access [https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com%2Fspeedtest).
+*   Explain that the first browser ([https://windows-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com%2Fspeedtest)) has no QoS configured, while the second ([https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com%2Fspeedtest)) had a QoS rule applied (1 Mbps avg, 2 Mbps peak, 3 Mbps burst - mention if needed)
+*   Start speed test on the first browser (no QoS) and explain you won't start both at the same time to avoid one test interfering in the other.
+*   When the first test finishes, start on the second browser and highlight the differences at the end.
+*   Switch to the RHV Administration interface (resize browser to use whole screen)
+*   Show the QoS rules configuration going to Compute -> Data Center -> DC01 -> QoS
+    *   VM network, as configured, limiting how much bandwidth the VM can use
+    *   Host network - allows configuring how much bandwidth each host network can use if using the same network interface (eg. same link with VLANs for storage, service, cluster network etc)
+    *   CPU - allows configuring how much CPU a VM can use.
+    *   Storage - allows configuring how much throughput or IOPs a VM can use.
+
+If required to show the QoS rule applied to the VM, go to Compute -> Virtual Machines -> NoisyNeighbor -> Network Interfaces: configured by vNIC profiles.
+
+### CPU and RAM hotplug
+
+RHV allows hotplugging CPU and RAM for guests that supports this feature. This means it’s possible scale up a VM while it’s running, allowing to quickly respond to load increase.
+
+*   Open a new browser window and access [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com)  - this is a simple PHP application running on RHEL that can show system hardware configuration.
+*   Show how many CPUs and how much RAM is configured
+*   Optional: resize windows to show both browser windows in the screen
+*   On RHV, Select Compute -> Virtual Machines -> ScaleUP VM, click on **Edit**. In **System**, change configuration to **4 CPUs** and **2048 MB RAM**. Click on **OK**.
+*   Highlight that the change can be applied immediately on next guest boot. Don’t change anything and click on **OK**.
+*   Show in the browser window that CPUs were added and amount of RAM was increased.
+
+If asked, mention that it’s possible to hot unplug CPUs (if supported by guest OS), but it isn’t currently possible to reduce RAM on live systems.
