@@ -1,9 +1,9 @@
-RHV 4.2 Demonstration
+RHV 4.2 LAB GUIDE
 ====================
 Deployment
 ----------
 
-You'll receive by e-mail the $GUID for your environment and the URLs to access the systems.
+Instructor willdistripute $GUIDs for each environment .
 
 Preparation
 -----------
