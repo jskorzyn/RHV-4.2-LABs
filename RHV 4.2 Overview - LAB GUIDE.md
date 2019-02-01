@@ -28,6 +28,7 @@ Credentials
 
 *   RHV Admin Portal → admin / r3dh4t1!
 *   RHV hosts → root / r3dh4t1!
+*   Workstation → root / r3dh4t1!
 *   All VMs → admin / r3dh4t1! (with sudo access)
 *   Wordpress → shadowman / r3dh4t!RHV418
 
@@ -96,7 +97,7 @@ One of the common operations is to create a VM, so let’s demo it
 Preparation:
 
 *   Open an additional web browser window and resize both RHV manager window and this new one so that both can be shown while the VM is migrated.
-*   Open a terminal window and ssh to workstation-$GUID.rhpds.opentlc.com. Prepare to ping the wordpress VM at 10.10.90.52.
+*   Open a terminal window and ssh to workstation-$GUID.rhpds.opentlc.com using credentials provided in "Credentials" section. Prepare to ping the wordpress VM at 10.10.90.50.
 *   The goal is to be able to show the video available in the wordpress app as well as the wordpress vm migrating and the ping running.  
     
 
