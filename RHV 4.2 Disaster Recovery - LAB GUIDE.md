@@ -22,12 +22,14 @@ Preparation
 
 1.  Create bookmarks in your browser for:
 
-    1.  RHV PROD Administration Portal:  [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com)
-    2.  RHV DR Administration Portal:  [https://dr-rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fdr-rhvm-$GUID.rhpds.opentlc.com)
-    3.  Ansible Tower: [https://tower-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Ftower-$GUID.rhpds.opentlc.com)
-    4.  Survey direct link (TBD): [http://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://mojo.redhat.com/external-link.jspa?url=http%3A%2F%2Fsurvey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E) (using HTTP to avoid TLS errors, but HTTPS also available)
-    5.  Survey settings page (TBD): [https://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fsurvey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E)
-    6.  Survey statistics page (TBD): [https://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fsurvey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E)
+| Name                                  | URL                                   |
+|--------------------------------------:|--------------------------------------:|
+| RHV PROD Administration Portal        | [https://rhvm-$GUID.rhpds.opentlc.com](https://rhvm-$GUID.rhpds.opentlc.com) |
+| RHV DR Administration Portal          | [https://dr-rhvm-$GUID.rhpds.opentlc.com](https://rhvm-$GUID.rhpds.opentlc.com) |
+| Ansible Tower                         | [https://tower-$GUID.rhpds.opentlc.com](https://tower-$GUID.rhpds.opentlc.com) |
+| Survey direct link (TBD)              | [http://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://survey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E) |
+| Survey settings page (TBD)            | [https://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://survey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E) |
+| Survey statistics page (TBD)          | [https://survey-$GUID.rhpds.opentlc.com/survey/<TBD>](https://survey-$GUID.rhpds.opentlc.com%2Fsurvey%2F%3CTBD%3E) |
 
 2.  Access RHVM and start the following VM:
     1.  Survey
@@ -49,15 +51,17 @@ Some verifications should be done before starting the demonstration, to ensure e
 Credentials
 -----------
 
-*   RHV Admin Portal → admin / r3dh4t1!
-*   RHV hosts → root / r3dh4t1!
-*   All VMs → admin / r3dh4t1! (with sudo access)
-*   LimeSurvey app → admin / r3dh4t!
+| Name              | User Name     | Password                    |
+|------------------:|:-------------:|:----------------------------|
+| RHV Admin Portal  | admin         | r3dh4t1!                    |
+| RHV hosts         | root          | r3dh4t1!                    |
+| All VMs           | admin         | r3dh4t1! (with sudo access) |
+| LimeSurvey app    | admin         | r3dh4t!                     |
 
 
 --------------------
 
-Demonstration script
+Lab Instructions
 --------------------
 
 ### Intro
