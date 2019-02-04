@@ -9,11 +9,12 @@ Deployment
 
 * Choose lab from the list: **RHV 4.2 Overview LAB**
 
-![alt text](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png "Lab List")
-
-* Enter LAB Key
+* Enter LAB Activation Key
 
 Wiil be provided by instructor
+
+![alt text](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png "Lab List")
+
 
 NOTE!
 -----------
