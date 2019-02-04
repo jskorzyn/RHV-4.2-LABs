@@ -32,11 +32,11 @@ Preparation
     
     | Name                      | URL                                     |
     |--------------------------:|----------------------------------------:|
-    | RHV Administration Portal | [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com) |
-    | Wordpress                 | [https://wordpress-$GUID.rhpds.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.example.com) |
-    | Windows Server (IIS)      | [https://windows-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com) |
-    | Noisy Neighbor (IIS)      | [https://noisy-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com) |
-    | Scale UP                  | [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com) |
+    | RHV Administration Portal | [https://rhvm-$GUID.rhpds.opentlc.com](https://rhvm-$GUID.rhpds.opentlc.com) |
+    | Wordpress                 | [https://wordpress-$GUID.rhpds.example.com](https://wordpress-$GUID.rhpds.example.com) |
+    | Windows Server (IIS)      | [https://windows-$GUID.rhpds.opentlc.com](https://windows-$GUID.rhpds.opentlc.com) |
+    | Noisy Neighbor (IIS)      | [https://noisy-$GUID.rhpds.opentlc.com](https://noisy-$GUID.rhpds.opentlc.com) |
+    | Scale UP                  | [https://scaleup-$GUID.rhpds.opentlc.com](https://scaleup-$GUID.rhpds.opentlc.com) |
 
 2.  Access RHVM and start the following VMs:
     *  Dhcp
@@ -129,7 +129,7 @@ Preparation:
 
 *   Organize / resize windows as explained.
 *   On the Virtual Machines listing, select the “**Wordpress app**” bookmark.
-*   Open the second browser at https://wordpress-$GUID.rhpds.opentlc.com
+*   Open the second browser at [https://wordpress-$GUID.rhpds.opentlc.com](https://wordpress-$GUID.rhpds.opentlc.com)
 *   Go down until the video is shown
 *   Tell you’re going to show a VM live migrating from a host to another one in the cluster
 *   type on terminal: _sudo ping -i 0.1 10.10.90.50_.
@@ -143,7 +143,7 @@ Preparation:
 
 Preparation
 
-Login to Wordpress: https://wordpress-$GUID.rhpds.opentlc.com (shadowman / r3dh4t!RHV418)
+Login to Wordpress: [https://wordpress-$GUID.rhpds.opentlc.com](https://wordpress-$GUID.rhpds.opentlc.com) (shadowman / r3dh4t!RHV418)
 
 *   Keep the same window layout from previous demo.
 *   Click on **“database” VM** and go to “**Disks**” tab
@@ -165,13 +165,13 @@ RHV provides QoS features to limit resource usage by VMs, avoiding one VM to con
 
 We have 2 Windows 2012R2 server VMs with a web application that can be used to measure network connection bandwidth.
 
-*   Open one browser window at [https://windows.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows.example.com)[https://windows-$GUID.rhpds.opentlc.com  
-    ](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com)Mention that RHV is certified to run several Windows client and server releases, including versions as Windows 10 and Windows Server 2016.  
+*   Open one browser window at [https://windows.example.com](https://windows.example.com)[https://windows-$GUID.rhpds.opentlc.com  
+    ](https://windows-$GUID.rhpds.opentlc.com)Mention that RHV is certified to run several Windows client and server releases, including versions as Windows 10 and Windows Server 2016.  
     (This demo is using Windows Server 2012 as the nested virtualization hosts have Skylake CPUs and it wasn’t possible to run Windows Server 2016 with it - mention if needed)
-*   On this same browser, change URL to [https://windows-$GUID.rhpds.opentlc.com/speedtest.](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com%2Fspeedtest)
+*   On this same browser, change URL to [https://windows-$GUID.rhpds.opentlc.com/speedtest](https://windows-$GUID.rhpds.opentlc.com%2Fspeedtest)
 *   Open another browser window and resize the 2 windows so that both are visible at the same time.
-*   On the second browser, access [https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com%2Fspeedtest).
-*   Explain that the first browser ([https://windows-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com%2Fspeedtest)) has no QoS configured, while the second ([https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com%2Fspeedtest)) had a QoS rule applied (1 Mbps avg, 2 Mbps peak, 3 Mbps burst - mention if needed)
+*   On the second browser, access [https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://noisy-$GUID.rhpds.opentlc.com%2Fspeedtest).
+*   Explain that the first browser ([https://windows-$GUID.rhpds.opentlc.com/speedtest](https://windows-$GUID.rhpds.opentlc.com%2Fspeedtest)) has no QoS configured, while the second ([https://noisy-$GUID.rhpds.opentlc.com/speedtest](https://noisy-$GUID.rhpds.opentlc.com%2Fspeedtest)) had a QoS rule applied (1 Mbps avg, 2 Mbps peak, 3 Mbps burst - mention if needed)
 *   Start speed test on the first browser (no QoS) and explain you won't start both at the same time to avoid one test interfering in the other.
 *   When the first test finishes, start on the second browser and highlight the differences at the end.
 *   Switch to the RHV Administration interface (resize browser to use whole screen)
@@ -187,7 +187,7 @@ If required to show the QoS rule applied to the VM, go to Compute -> Virtual Mac
 
 RHV allows hotplugging CPU and RAM for guests that supports this feature. This means it’s possible scale up a VM while it’s running, allowing to quickly respond to load increase.
 
-*   Open a new browser window and access [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com)  - this is a simple PHP application running on RHEL that can show system hardware configuration.
+*   Open a new browser window and access [https://scaleup-$GUID.rhpds.opentlc.com](https://scaleup-$GUID.rhpds.opentlc.com)  - this is a simple PHP application running on RHEL that can show system hardware configuration.
 *   Show how many CPUs and how much RAM is configured
 *   Optional: resize windows to show both browser windows in the screen
 *   On RHV, Select Compute -> Virtual Machines -> ScaleUP VM, click on **Edit**. In **System**, change configuration to **4 CPUs** and **2048 MB RAM**. Click on **OK**.
