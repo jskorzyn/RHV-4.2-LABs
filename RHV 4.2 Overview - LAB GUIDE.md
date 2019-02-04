@@ -166,6 +166,7 @@ RHV provides QoS features to limit resource usage by VMs, avoiding one VM to con
 We have 2 Windows 2012R2 server VMs with a web application that can be used to measure network connection bandwidth.
 
 *   Open one browser window at [https://windows-$GUID.rhpds.opentlc.com](https://windows-$GUID.rhpds.opentlc.com) 
+
 Mention that RHV is certified to run several Windows client and server releases, including versions as Windows 10 and Windows Server 2016.  
     (This demo is using Windows Server 2012 as the nested virtualization hosts have Skylake CPUs and it wasn’t possible to run Windows Server 2016 with it - mention if needed)
 *   On this same browser, change URL to [https://windows-$GUID.rhpds.opentlc.com/speedtest](https://windows-$GUID.rhpds.opentlc.com%2Fspeedtest)
