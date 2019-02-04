@@ -9,11 +9,14 @@ Preparation
 -----------
 
 1.  Create bookmarks in your browser for:
-    1.  RHV Administration Portal:  [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com)
-    2.  Wordpress: [https://wordpress-$GUID.rhpds.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.example.com)
-    3.  Windows Server (IIS): [https://windows-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com)
-    4.  Noisy Neighbor (IIS): [https://noisy-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com)
-    5.  Scale UP: [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com)
+    
+    | Name                      | URL                                     |
+    |--------------------------:|----------------------------------------:|
+    | RHV Administration Portal | [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com) |
+    | Wordpress                 | [https://wordpress-$GUID.rhpds.example.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.example.com) |
+    | Windows Server (IIS)      | [https://windows-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwindows-$GUID.rhpds.opentlc.com) |
+    | Noisy Neighbor (IIS)      | [https://noisy-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fnoisy-$GUID.rhpds.opentlc.com) |
+    | Scale UP                  | [https://scaleup-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fscaleup-$GUID.rhpds.opentlc.com) |
 
 2.  Access RHVM and start the following VMs:
     1.  Dhcp
