@@ -78,12 +78,12 @@ Mention this UI is common to most Red Hat Products.
 
 *   Listing of all VMs including basic information like IP addresses, FQDN, resource usage and host where it’s running.
 *   Click on “**RHEL VMs**” bookmark to show the usage of the feature. Show the query in the box.  
-    *   Write **“and”** at the end of the query
+    *   Write “**and**” at the end of the query
     *   show available options and tell several complex queries can be created and saved as a bookmark
-    *   Include **“status=up”** and press enter.
-    *   Click on **“star”**, but don’t save.
+    *   Include “**status=up**” and press enter.
+    *   Click on “**star**”, but don’t save.
 *   Clear search box (x button)
-*   Select **“wordpress” VM** and click on **Console**  
+*   Select **“Wordpress” VM** and click on **Console**  
 *   Close the window
 
 ### New VM
@@ -91,12 +91,12 @@ Mention this UI is common to most Red Hat Products.
 One of the common operations is to create a VM, so let’s try it
 
 *   Click in “**New**” to create a VM
-*   Select “rhel-7.5-demo” template  
+*   Select **“rhel-7.5-demo” template**  
     (admin user is already created, as opposed to the rhel-7.5-template where cloud-init must be used)
-*   Name: demo01
-*   Description: creating vm demo
-*   Mention the VM is attached to a network and other interfaces could be configured using the “+” sign. Also, Network interfaces may be added later.
-*   Click on “Show Advanced Options” if needed
+*   Name: **demo01**
+*   Description: **creating vm demo**
+*   Mention the VM is attached to a network and other interfaces could be configured using the **“+” sign**. Also, Network interfaces may be added later.
+*   Click on **“Show Advanced Options”** if needed
 *   Click on **System**
 *   Show the admin can set RAM and CPUs.  
     Maximum memory means the max amount of RAM that can be hot-added to the VM  
@@ -109,11 +109,11 @@ One of the common operations is to create a VM, so let’s try it
 *   Go to **Disks** tab. Similarly tell this tab shows information about disks used by the VM.
     *   Click on **New**, select “**Direct LUN**” and say RHV allows VMs to use LUNs as disks.
     *   Click on **Cancel**
-*   Go to **Snapshots** tab. Click on **Create** and write “snap1” on description. Click on **OK**.
-    *   Snapshots can be taken with VM running and it’s possible to “preview” a snapshot before reverting to it. It’s also possible to create a template from a snapshot and create a VM based on the template.
-*   Click on **Run** to start the “demo01” VM.
+*   Go to **Snapshots** tab. Click on **Create** and write **“snap1”** on description. Click on **OK**.
+    *   Snapshots can be taken with VM running and it’s possible to **“preview”** a snapshot before reverting to it. It’s also possible to create a template from a snapshot and create a VM based on the template.
+*   Click on **Run** to start the **“demo01” VM**.
 *   Go back to the Virtual Machines listing
-*   Access “demo01” console and login with “admin / r3dh4t1!”
+*   Access **“demo01” console** and login with “admin / r3dh4t1!”
 *   Close console
 
 ### Live Migration
@@ -121,34 +121,34 @@ One of the common operations is to create a VM, so let’s try it
 Preparation:
 
 *   Open an additional web browser window and resize both RHV manager window and this new one so that both can be shown while the VM is migrated.
-*   Open a terminal window and ssh to workstation-$GUID.rhpds.opentlc.com using credentials provided in "Credentials" section. Prepare to ping the wordpress VM at 10.10.90.50.
+*   Open a terminal window and **ssh to workstation-$GUID.rhpds.opentlc.com** using credentials provided in "Credentials" section. Prepare to **ping the wordpress VM at 10.10.90.50**.
 *   The goal is to be able to show the video available in the wordpress app as well as the wordpress vm migrating and the ping running.  
     
 
-Execute the demo.
+#### Execute the demo.
 
 *   Organize / resize windows as explained.
-*   On the Virtual Machines listing, select the “Wordpress app” bookmark.
-*   Open the second browser at [https://wordpress-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.opentlc.com)
+*   On the Virtual Machines listing, select the “**Wordpress app**” bookmark.
+*   Open the second browser at https://wordpress-$GUID.rhpds.opentlc.com
 *   Go down until the video is shown
 *   Tell you’re going to show a VM live migrating from a host to another one in the cluster
 *   type on terminal: _sudo ping -i 0.1 10.10.90.50_.
-*   Select “wordpress” vm and click on migrate - DON’T Click on OK
+*   Select **“wordpress” vm** and click on migrate - DON’T Click on OK
 *   Play the video and immediately start the migration.  
     Should take approx. 30 seconds
 *   VM migrated from one host to another without interruption.
-*   Cancel _ping_ and show no packets were lost (although it never happened in my tests, some packets could be lost, but definitely not many).
+*   Cancel _ping_ and show no packets were lost (some packets could be lost, but definitely not many).
 
 ### Storage Live Migration
 
 Preparation
 
-Login to Wordpress: [https://wordpress-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fwordpress-$GUID.rhpds.opentlc.com) (shadowman / r3dh4t!RHV418)
+Login to Wordpress: https://wordpress-$GUID.rhpds.opentlc.com (shadowman / r3dh4t!RHV418)
 
 *   Keep the same window layout from previous demo.
-*   Click on “database” VM and go to “**Disks**” tab
+*   Click on **“database” VM** and go to “**Disks**” tab
 *   Mention that sometimes it’s required to move the VM disk from an storage to another, but some applications can’t have downtime.
-*   Select the disk, click on the 3 dots at the right of the “Remove” button and select “Move”
+*   Select the disk, click on the 3 dots at the right of the “Remove” button and select **“Move”**
 *   Show that there’s a Source and a Target Storage domain. Click on **OK**.
 *   While the disk is migration, write a blog post (example below)  
 
@@ -175,7 +175,7 @@ We have 2 Windows 2012R2 server VMs with a web application that can be used to m
 *   Start speed test on the first browser (no QoS) and explain you won't start both at the same time to avoid one test interfering in the other.
 *   When the first test finishes, start on the second browser and highlight the differences at the end.
 *   Switch to the RHV Administration interface (resize browser to use whole screen)
-*   Show the QoS rules configuration going to Compute -> Data Center -> DC01 -> QoS
+*   Show the QoS rules configuration going to **Compute -> Data Center -> DC01 -> QoS**
     *   VM network, as configured, limiting how much bandwidth the VM can use
     *   Host network - allows configuring how much bandwidth each host network can use if using the same network interface (eg. same link with VLANs for storage, service, cluster network etc)
     *   CPU - allows configuring how much CPU a VM can use.
