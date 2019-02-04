@@ -26,11 +26,13 @@ Preparation
 Credentials
 -----------
 
-*   RHV Admin Portal → admin / r3dh4t1!
-*   RHV hosts → root / r3dh4t1!
-*   Workstation → root / r3dh4t1!
-*   All VMs → admin / r3dh4t1! (with sudo access)
-*   Wordpress → shadowman / r3dh4t!RHV418
+| Name              | User Name   | Password                     |
+|-------------------|:-----------:|-----------------------------:|
+| RHV Admin Portal  | admin       | r3dh4t1!                     |
+| RHV hosts         | root        | r3dh4t1!                     |
+| Workstation       | root        | r3dh4t1!                     |
+| All VMs           | admin       | r3dh4t1! (with sudo access)  |
+| Wordpress         | shadowman   | r3dh4t!RHV418                |
 
 
 --------------------
