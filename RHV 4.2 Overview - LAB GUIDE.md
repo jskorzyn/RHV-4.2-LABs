@@ -3,9 +3,17 @@ RHV 4.2 Overview - LAB GUIDE
 Deployment
 ----------
 
-Click on the GUID Generator Link to generate your GUID for the lab: 
+* Click on the GUID Generator Link to generate your GUID for the lab: 
 
 [GIUD Generator](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
+
+* Choose lab from the list
+
+**RHV 4.2 Overview LAB**
+
+* Enter LAB Key
+
+Wiil be provided by instructor
 
 Preparation
 -----------
