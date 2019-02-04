@@ -7,9 +7,12 @@ Deployment
 
 [GIUD Generator](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
 
-* Choose lab from the list:
+* Choose lab from the list: **RHV 4.2 Overview LAB**
 
-**RHV 4.2 Overview LAB**
+
+        RHV-4.2-LABs/files/lab01.png
+     
+
 
 * Enter LAB Key
 
