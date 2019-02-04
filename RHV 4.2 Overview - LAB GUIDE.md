@@ -9,10 +9,7 @@ Deployment
 
 * Choose lab from the list: **RHV 4.2 Overview LAB**
 
-
-        RHV-4.2-LABs/files/lab01.png
-     
-
+![alt text](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png "Lab List")
 
 * Enter LAB Key
 
