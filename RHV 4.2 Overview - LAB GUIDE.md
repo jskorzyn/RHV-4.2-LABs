@@ -13,7 +13,7 @@ Deployment
 
 Wiil be provided by instructor
 
-![alt text](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png "Lab List")
+[![Lab List](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png)](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
 
 
 NOTE!
