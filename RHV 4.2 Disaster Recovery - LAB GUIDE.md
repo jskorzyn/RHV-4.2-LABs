@@ -4,12 +4,24 @@ RHV 4.2 Disaster Recovery - LAB GUIDE
 Deployment
 ----------
 
-Instructor will distripute $$GUIDs for each environment .
+* Click on the GUID Generator Link to generate your GUID for the lab: 
+
+[GIUD Generator](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
+
+* Choose lab from the list: **RHV 4.2 Overview LAB**
+
+* Enter LAB Activation Key
+
+Wiil be provided by instructor
+
+[![Lab List](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png)](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
+
 
 Preparation
 -----------
 
 1.  Create bookmarks in your browser for:
+
     1.  RHV PROD Administration Portal:  [https://rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Frhvm-$GUID.rhpds.opentlc.com)
     2.  RHV DR Administration Portal:  [https://dr-rhvm-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Fdr-rhvm-$GUID.rhpds.opentlc.com)
     3.  Ansible Tower: [https://tower-$GUID.rhpds.opentlc.com](https://mojo.redhat.com/external-link.jspa?url=https%3A%2F%2Ftower-$GUID.rhpds.opentlc.com)
