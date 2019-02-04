@@ -5,7 +5,7 @@ Deployment
 
 Click on the GUID Generator Link to generate your GUID for the lab: 
 
-[GIUD Generator] (https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
+[GIUD Generator](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
 
 Preparation
 -----------
