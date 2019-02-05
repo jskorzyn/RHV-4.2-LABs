@@ -65,8 +65,37 @@ Lab Instructions
 --------------------
 ### A Bit Of Theory
 
+Red Hat Virtualization (RHV) supports two types of disaster recovery solutions to ensure that environments can recover when a site outage occurs. Both solutions support two sites, and both require replicated storage. 
+
+#### Active-Active Disaster Recovery Scenario
+
+Red Hat Virtualization supports an active-active disaster recovery failover configuration that can span two sites. Both sites are active, and if the primary site becomes unavailable, the Red Hat Virtualization environment will continue to operate in the secondary site to ensure business continuity.
+
+The active-active failover is achieved by configuring a stretch cluster where hosts capable of running the virtual machines are located in the primary and secondary site. All the hosts belong to the same Red Hat Virtualization cluster. 
 
 
+
+
+Virtual machines will migrate to the secondary site if the primary site becomes unavailable. The virtual machines will automatically failback to the primary site when the site becomes available and the storage is replicated in both sites. 
+
+
+#### Active-Passive Disaster Recovery Scenario
+
+Red Hat Virtualization supports an active-passive disaster recovery solution that can span two sites. If the primary site becomes unavailable, the Red Hat Virtualization environment can be forced to fail over to the secondary (backup) site. 
+
+The failover and failback process must be executed manually. To do this you need to create Ansible playbooks to map entities between the sites, and to manage the failover and failback processes. The mapping file instructs the Red Hat Virtualization components where to fail over or fail back to on the target site. 
+
+The following diagram describes an active-passive setup where the machine running Red Hat Ansible Engine is highly available, and has access to the oVirt.disaster-recovery Ansible role, configured playbooks, and mapping file. The storage domains that store the virtual machine disks in Site A is replicated. Site B has no virtual machines or attached storage domains. 
+
+
+
+
+When the environment fails over to Site B, the storage domains are first attached and activated in Site B’s data center, and then the virtual machines are registered. Highly available virtual machines will fail over first. 
+
+
+
+
+You will need to manually fail back to the primary site (Site A) when it is running again. 
 
 ### Intro
 
@@ -138,5 +167,6 @@ Execute the failback playbook - requires shutting down VMs on secondary
 >     ansible-playbook playbooks/failback.yml --tags "fail_back"
 
 ```
-Failover tasks are documented and working properly. Failback is working only by executing playbooks directly from workstation as there's an issue with oVirt.disaster-recovery role which makes it incompatible with Ansible Tower.
+Failover tasks are documented and working properly. 
+Failback is working only by executing playbooks directly from workstation as there's an issue with oVirt.disaster-recovery role which makes it incompatible with Ansible Tower.
 ```
