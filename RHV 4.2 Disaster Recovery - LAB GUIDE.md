@@ -63,6 +63,10 @@ Credentials
 
 Lab Instructions
 --------------------
+### A Bit Of Theory
+
+
+
 
 ### Intro
 
@@ -70,11 +74,11 @@ Show slide with link to survey and ask attendees to answer it.
 
 _(Open survey on browser)_
 
-Pretend this survey is an important business service that should continue working if the company data center fails. So the company has a disaster recovery data center that can run workloads in case he primary one fails. This means all data must be regularly replicated from the primary to the secondary site.
+Pretend this survey is an important business service that should continue working if the company data center fails. So the company has a disaster recovery data center that can run workloads in case the primary one fails. This means all data must be regularly replicated from the primary to the secondary site.
 
-In this demonstration I’ll show how this can be achieved using Red Hat Technologies like:
+In this demonstration we will show how this can be achieved using Red Hat Technologies like:
 
-* RHV;
+*  RHV;
 *  Gluster;
 *  Ansible Tower.
 
