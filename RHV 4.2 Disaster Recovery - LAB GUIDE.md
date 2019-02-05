@@ -67,7 +67,7 @@ Lab Instructions
 
 Red Hat Virtualization (RHV) supports two types of disaster recovery solutions to ensure that environments can recover when a site outage occurs. Both solutions support two sites, and both require replicated storage. 
 
-#### ___Active-Active Disaster Recovery Scenario___
+#### Active-Active Disaster Recovery Scenario
 
 Red Hat Virtualization supports an active-active disaster recovery failover configuration that can span two sites. Both sites are active, and if the primary site becomes unavailable, the Red Hat Virtualization environment will continue to operate in the secondary site to ensure business continuity.
 
@@ -84,7 +84,7 @@ Virtual machines will migrate to the secondary site if the primary site becomes 
 
 ![](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/RHV_Disaster-Recovery-Active_02.png)
 
-#### __Active-Passive Disaster Recovery Scenario__
+#### Active-Passive Disaster Recovery Scenario
 
 Red Hat Virtualization supports an active-passive disaster recovery solution that can span two sites. If the primary site becomes unavailable, the Red Hat Virtualization environment can be forced to fail over to the secondary (backup) site. 
 
