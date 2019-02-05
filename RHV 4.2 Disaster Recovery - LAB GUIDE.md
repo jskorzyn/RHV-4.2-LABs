@@ -67,7 +67,7 @@ Lab Instructions
 
 Red Hat Virtualization (RHV) supports two types of disaster recovery solutions to ensure that environments can recover when a site outage occurs. Both solutions support two sites, and both require replicated storage. 
 
-#### __Active-Active Disaster Recovery Scenario__
+#### ___Active-Active Disaster Recovery Scenario___
 
 Red Hat Virtualization supports an active-active disaster recovery failover configuration that can span two sites. Both sites are active, and if the primary site becomes unavailable, the Red Hat Virtualization environment will continue to operate in the secondary site to ensure business continuity.
 
@@ -177,5 +177,6 @@ Execute the failback playbook - requires shutting down VMs on secondary
 
 ```
 Failover tasks are documented and working properly. 
-Failback is working only by executing playbooks directly from workstation as there's an issue with oVirt.disaster-recovery role which makes it incompatible with Ansible Tower.
+Failback is working only by executing playbooks directly from workstation as there's an issue with 
+oVirt.disaster-recovery role which makes it incompatible with Ansible Tower.
 ```
