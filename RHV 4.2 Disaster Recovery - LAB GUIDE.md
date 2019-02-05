@@ -54,6 +54,7 @@ Credentials
 | Name              | User Name     | Password                    |
 |------------------:|:-------------:|:----------------------------|
 | RHV Admin Portal  | admin         | r3dh4t1!                    |
+| Ansible Tower     | dr-admin      | r3dh4t1!                    |
 | RHV hosts         | root          | r3dh4t1!                    |
 | All VMs           | admin         | r3dh4t1! (with sudo access) |
 | LimeSurvey app    | admin         | r3dh4t!                     |
