@@ -8,13 +8,13 @@ Deployment
 
 [GIUD Generator](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
 
-* Choose lab from the list: **RHV 4.2 Overview LAB**
+* Choose lab from the list: **RHV 4.2 Disaster Recovery LAB**
 
 * Enter LAB Activation Key
 
 Wiil be provided by instructor
 
-[![Lab List](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab01.png)](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
+[![Lab List](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/lab02.png)](https://www.opentlc.com/gg/gg.cgi?profile=generic_emea_jskorzyn)
 
 
 Preparation
