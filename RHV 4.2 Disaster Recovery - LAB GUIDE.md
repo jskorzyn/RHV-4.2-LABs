@@ -73,10 +73,14 @@ Red Hat Virtualization supports an active-active disaster recovery failover conf
 
 The active-active failover is achieved by configuring a stretch cluster where hosts capable of running the virtual machines are located in the primary and secondary site. All the hosts belong to the same Red Hat Virtualization cluster. 
 
+##### Stretch Cluster Configuration
+
 ![](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/RHV_Disaster-Recovery-Active_01.png)
 
 
 Virtual machines will migrate to the secondary site if the primary site becomes unavailable. The virtual machines will automatically failback to the primary site when the site becomes available and the storage is replicated in both sites. 
+
+##### Failed Over Stretch Cluster
 
 ![](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/RHV_Disaster-Recovery-Active_02.png)
 
@@ -88,10 +92,14 @@ The failover and failback process must be executed manually. To do this you need
 
 The following diagram describes an active-passive setup where the machine running Red Hat Ansible Engine is highly available, and has access to the oVirt.disaster-recovery Ansible role, configured playbooks, and mapping file. The storage domains that store the virtual machine disks in Site A is replicated. Site B has no virtual machines or attached storage domains. 
 
+##### Active-Passive Configuration
+
 ![](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/RHV_Disaster_Recovery_Passive_01.png)
 
 
 When the environment fails over to Site B, the storage domains are first attached and activated in Site B’s data center, and then the virtual machines are registered. Highly available virtual machines will fail over first. 
+
+##### Failover to Backup Site
 
 ![](https://github.com/jskorzyn/RHV-4.2-LABs/blob/master/files/RHV_Disaster_Recovery_Passive_02.png)
 
