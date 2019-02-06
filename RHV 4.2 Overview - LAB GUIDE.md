@@ -33,7 +33,7 @@ Preparation
     | Name                      | URL                                     |
     |--------------------------:|----------------------------------------:|
     | RHV Administration Portal | [https://rhvm-$GUID.rhpds.opentlc.com](https://rhvm-$GUID.rhpds.opentlc.com) |
-    | Wordpress                 | [https://wordpress-$GUID.rhpds.example.com](https://wordpress-$GUID.rhpds.opentlc.com) |
+    | Wordpress                 | [https://wordpress-$GUID.rhpds.opentlc.com](https://wordpress-$GUID.rhpds.opentlc.com) |
     | Windows Server (IIS)      | [https://windows-$GUID.rhpds.opentlc.com](https://windows-$GUID.rhpds.opentlc.com) |
     | Noisy Neighbor (IIS)      | [https://noisy-$GUID.rhpds.opentlc.com](https://noisy-$GUID.rhpds.opentlc.com) |
     | Scale UP                  | [https://scaleup-$GUID.rhpds.opentlc.com](https://scaleup-$GUID.rhpds.opentlc.com) |
