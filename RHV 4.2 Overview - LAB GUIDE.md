@@ -194,5 +194,3 @@ RHV allows hotplugging CPU and RAM for guests that supports this feature. This m
 *   On RHV, Select Compute -> Virtual Machines -> ScaleUP VM, click on **Edit**. In **System**, change configuration to **4 CPUs** and **2048 MB RAM**. Click on **OK**.
 *   Highlight that the change can be applied immediately on next guest boot. Don’t change anything and click on **OK**.
 *   Show in the browser window that CPUs were added and amount of RAM was increased.
-
-If asked, mention that it’s possible to hot unplug CPUs (if supported by guest OS), but it isn’t currently possible to reduce RAM on live systems.
